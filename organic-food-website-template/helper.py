@@ -23,10 +23,10 @@ def get_fitness_plan(goal, duration, preferences, restrictions):
         "meals": ["Fitness Meal 1", "Fitness Meal 2", "Fitness Meal 3"]
     }
 
-def create_user(username, password):
-    # Placeholder function to simulate user creation
+def validate_login(username, password):
+    # Validate login logic (placeholder)
     return True
 
-def authenticate_user(username, password):
-    # Placeholder function to simulate user authentication
+def register_user(username, password):
+    # Register user logic (placeholder)
     return True
