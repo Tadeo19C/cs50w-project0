@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Google Search</title>
 </head>
 <body>
     <header>
         <div class="options">
-            <a href="#">Gmail</a>
-            <a href="#">Imagenes</a>
-            <a href="#">Apps</a>
-            <a href="#">Users</a>
+            <a href="images.html">Imagenes</a>
+            <a href="advanced.html">Búsqueda avanzada</a>
         </div>
     </header>
     <main>
@@ -20,14 +18,15 @@
             <figure>
                 <img src="img/580b57fcd9996e24bc43c51f.png" alt="" class="img">
             </figure>
-            <div class="search">
-                <span class="search-logo"></span>
-                <input type="text" name="" id="">
-                <button><span class="micro"></span></button>
-            </div>
+            <form class="search-form" action="https://www.google.com/search" method="GET">
+                <div class="search">
+                    <span class="search-logo"></span> 
+                    <input type="text" name="q" id="image-search-input" placeholder="Buscar imágenes">
+                    <button type="button"><span class="micro"></span></button> 
+                </div>
             <div class="search-butons">
-                <button>Buscar con Google</button>
-                <button>Voy a tener suerte</button>
+                <button type="submit">Buscar con Google</button>
+                <button type="button" onclick="feelingLucky()">Voy a tener suerte</button>
             </div>
             <p>Google offers in: <a href="">..Language</a></p>
         </div>
@@ -50,5 +49,12 @@
             </div>
         </section>
     </footer>
+
+    <script>
+        function feelingLucky() {
+            const query = document.getElementById('search-input').value;
+            window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=Im+Feeling+Lucky`;
+        }
+    </script>
 </body>
 </html>
