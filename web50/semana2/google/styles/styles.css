@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +29,15 @@ header .options {
     transition: background-color 0.3s, color 0.3s;
 }
 
-header .options a:hover {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
 header .options a {
     text-decoration: none;
     color: black;
+    font-size: 16px; 
+}
+
+header .options a:hover {
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 main {
@@ -52,7 +52,7 @@ main {
 
 .img {
     height: 200px;
-    width: 400px;
+    width: 300px;
 }
 
 main .container {
@@ -125,18 +125,20 @@ main .container p {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url('img/search.svg');
+    background-image: url("img/search.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .micro {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url('img/microphone.svg');
+    background-image: url("img/microphone.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 footer {
@@ -144,7 +146,7 @@ footer {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    background-color: rgba(190, 175, 175, 0.425);
+    background-color: rgba(230, 221, 221, 0.651);
 }
 
 footer section {
@@ -177,18 +179,47 @@ footer section.more div a:hover {
     color: #333;
 }
 
-.advanced-search label {
+.container-ad {
+    width: 80%;
+    text-align: center; 
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.advanced-search {
     display: block;
-    margin-top: 16px;
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: left;
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+}
+
+.advanced-search label {
+    display: flex;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+    
 }
 
 .advanced-search input {
-    width: 100%;
-    padding: 8px;
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box;
+    margin-bottom: 10px; 
     margin-top: 8px;
-    border: 1px solid gray;
-    border-radius: 4px;
-    outline: none;
+    padding: 5px;
+}
+
+.container-ad .img {
+    display: inline-block;
+    width: 300px;
+    height: auto; 
+    max-width: 100%; 
+    margin-bottom: 16px; 
 }
 
 .blue-button {
@@ -225,12 +256,20 @@ footer section.more div a:hover {
     main .container .search-butons button {
         padding: 10px 20px;
     }
+
+    header .options a {
+        font-size: 14px; 
+    }
 }
 
 @media (max-width: 768px) {
     header .options {
         gap: 8px;
         padding: 4px;
+    }
+
+    header .options a {
+        font-size: 12px; 
     }
 
     .img {
@@ -312,5 +351,9 @@ footer section.more div a:hover {
     footer section.more div {
         flex-direction: column;
         gap: 4px;
+    }
+
+    header .options a {
+        font-size: 10px; 
     }
 }
